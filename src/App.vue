@@ -1,6 +1,12 @@
 <template>
   <div class="vue-scaffolding">
-    <router-view />
+    <header>header</header>
+    <div style="display: flex;">
+      <div class="silder-bar">
+        silder bar
+      </div>
+      <main id="container" />
+    </div>
   </div>
 </template>
 
@@ -11,5 +17,8 @@ export default {
 </script>
 
 <style>
-
+html,body {
+  margin: 0;
+  padding: 0;
+}
 </style>
