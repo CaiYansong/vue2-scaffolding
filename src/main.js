@@ -1,15 +1,14 @@
-import Vue from 'vue';
+import { createApp } from 'vue';
 import less from 'less';
 
 import App from './App.vue';
 import router from './router';
 import store from './store';
 
-Vue.use(less);
+const app = createApp(App);
 
-new Vue({
-  router,
-  store,
-  components: { App },
-  render: h => h(App),
-}).$mount('#app');
+app.use(less);
+app.use(router);
+app.use(store);
+
+app.mount('#app');
