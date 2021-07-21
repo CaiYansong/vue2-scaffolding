@@ -23,4 +23,6 @@ actions.onGlobalStateChange((newState, prev) => {
 // 无key，表示取全部
 actions.getGlobalState = key => (key ? initialState[key] : initialState);
 
+export const state = initialState;
+
 export default actions;

@@ -1,7 +1,8 @@
 <template>
   <div class="vue-scaffolding">
     <header class="vue-scaffolding-header">
-      header
+      header --
+      username: {{ state.user.name }}
     </header>
     <section
       class="vue-scaffolding-main"
@@ -18,8 +19,19 @@
 </template>
 
 <script>
-export default {
+import actions, { state } from '@/actions';
 
+export default {
+  data() {
+    return {
+      state,
+    };
+  },
+  created() {
+    setTimeout(() => {
+      actions.setGlobalState({ a: 1 });
+    }, 1000);
+  },
 };
 </script>
 
