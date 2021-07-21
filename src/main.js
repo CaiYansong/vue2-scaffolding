@@ -7,6 +7,7 @@ import less from 'less';
 import router from '@/router';
 // import routes from '@/router/routes';
 import store from '@/store';
+import globalRegister from '@/actions/global-register';
 import App from './App.vue';
 
 Vue.use(less);
@@ -36,6 +37,8 @@ function render(props = {}) {
 
 // eslint-disable-next-line no-underscore-dangle
 if (!window.__POWERED_BY_QIANKUN__) {
+  // 独立运行时，也注册一个名为global的store module
+  globalRegister(store);
   render();
 }
 
@@ -52,6 +55,8 @@ export async function bootstrap() {
  * 应用每次进入都会调用 mount 方法，通常我们在这里触发应用的渲染方法
  */
 export async function mount(props) {
+  console.log(globalRegister);
+  globalRegister(store, props);
   render(props);
 }
 
