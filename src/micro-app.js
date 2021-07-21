@@ -1,4 +1,4 @@
-import store from './store';
+import actions from '@/actions';
 
 const microApps = [
   {
@@ -15,13 +15,13 @@ const microApps = [
 
 const apps = microApps.map(item => ({
   ...item,
-  // 子应用挂载的div
+  // 子应用挂载的 div
   container: '#container',
   props: {
     // 下发基础路由
     routerBase: item.activeRule,
-    // 下发getGlobalState方法
-    getGlobalState: store.getGlobalState,
+    // 下发 getGlobalState 方法
+    getGlobalState: actions.getGlobalState,
   },
 }));
 

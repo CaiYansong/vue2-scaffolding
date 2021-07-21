@@ -3,13 +3,11 @@ import less from 'less';
 import { registerMicroApps, setDefaultMountApp, start } from 'qiankun';
 
 import App from './App.vue';
-import store from './store';
 import microApps from './micro-app';
 
 Vue.use(less);
 
 new Vue({
-  store,
   components: { App },
   render: h => h(App),
 }).$mount('#app');
