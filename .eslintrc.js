@@ -16,5 +16,9 @@ module.exports = {
     'no-param-reassign': 'off',
     'arrow-parens': ['error', 'as-needed'],
     'global-require': 0,
+    'no-unused-expressions': ["error", { "allowShortCircuit": true }],
   },
+  "globals": {
+    "__webpack_public_path__": true
+  }
 };
