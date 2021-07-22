@@ -2,9 +2,14 @@ import actions from '@/actions';
 
 const microApps = [
   {
-    name: 'vue-app',
-    entry: process.env.VUE_APP_MICRO_VUE,
-    activeRule: '/vue-app',
+    name: 'qiankun-micro-vue2',
+    entry: process.env.VUE_APP_MICRO_VUE2,
+    activeRule: '/qiankun-micro-vue2',
+  },
+  {
+    name: 'qiankun-micro-vue3',
+    entry: process.env.VUE_APP_MICRO_VUE3,
+    activeRule: '/qiankun-micro-vue3',
   },
   {
     name: 'react-app',
