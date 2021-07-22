@@ -13,6 +13,8 @@
     </div>
     -{{ JSON.stringify(state) }}
     <router-view />
+    <i class="el-icon-edit"></i>
+    <el-button>test button</el-button>
     ./
     <img style="width: 100px;" :src="require('./assets/test-729kb.jpeg')" alt="">
     @/

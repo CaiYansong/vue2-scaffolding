@@ -1,6 +1,8 @@
 import './public-path';
 import Vue from 'vue';
 import less from 'less';
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 // import VueRouter from 'vue-router';
 
 // 子路由使用 hash 的写法
@@ -11,6 +13,7 @@ import globalRegister from '@/actions/global-register';
 import App from './App.vue';
 
 Vue.use(less);
+Vue.use(ElementUI);
 
 let instance = null;
 function render(props = {}) {
