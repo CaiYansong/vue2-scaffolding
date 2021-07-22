@@ -9,4 +9,11 @@
     // eslint-disable-next-line
     __webpack_public_path__ = window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__
   }
+
+  // 解决引入 less 导致页面空白的问题
+  if (!window.less) {
+    window.less = {
+      async: true,
+    };
+  }
 }());
