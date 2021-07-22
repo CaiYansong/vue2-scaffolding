@@ -11,6 +11,8 @@
       </router-link>
     </div>
     <router-view />
+    <a-button>Default Button</a-button>
+    <StepBackwardOutlined />
     ./
     <img style="width: 100px;" :src="require('./assets/test-729kb.jpeg')" alt="">
     @/
@@ -24,6 +26,7 @@
 </template>
 
 <script>
+import { StepBackwardOutlined } from '@ant-design/icons-vue';
 import testImg from './assets/test-729kb.jpeg';
 import testImgA from '@/assets/test-729kb.jpeg';
 
@@ -33,6 +36,9 @@ export default {
       testImg,
       testImgA,
     }
+  },
+  components: {
+    StepBackwardOutlined,
   },
 };
 </script>

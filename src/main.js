@@ -1,6 +1,13 @@
 import './public-path';
 import { createApp } from 'vue';
 import less from 'less';
+import Antd from 'ant-design-vue';
+import 'ant-design-vue/dist/antd.css';
+// 按需引入
+// import Button from 'ant-design-vue/lib/button';
+// import 'ant-design-vue/lib/button/style'; 
+// 或者 ant-design-vue/lib/button/style/css 加载 css 文件
+// app.use(Button)
 
 import setupRouter from '@/router';
 import store from '@/store';
@@ -16,6 +23,7 @@ function render(props) {
   router = setupRouter();
   app = createApp(App);
   app.use(less);
+  app.use(Antd);
   app.use(router);
   app.use(store);
 
