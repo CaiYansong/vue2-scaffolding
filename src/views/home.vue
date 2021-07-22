@@ -10,6 +10,8 @@
         set username
       </button>
       <div>username: {{ this.$store.state.user.name }}</div>
+      <div>global username: {{ this.$store.state.global.user.name }}</div>
+      {{ JSON.stringify(state) }}
     </div>
     <h2>home router-view</h2>
     <router-view />
@@ -17,6 +19,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 
 export default {
   data() {
@@ -24,9 +27,15 @@ export default {
       username: '',
     };
   },
+  computed: {
+    ...mapState('global', {
+      state: state => state,
+    }),
+  },
   methods: {
     setUsername() {
       this.$store.commit('setUser', { name: this.username });
+      this.$store.commit('global/setGlobalState', { user: { name: this.username } });
     },
   },
 };
