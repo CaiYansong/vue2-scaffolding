@@ -14,6 +14,8 @@ import App from './App.vue';
 
 Vue.use(less);
 Vue.use(ElementUI);
+// 按需引入
+// Vue.component(Button.name, Button);
 
 let instance = null;
 function render(props = {}) {
