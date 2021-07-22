@@ -1,5 +1,16 @@
 <template>
   <div class="vue-scaffolding">
+    <h1>qiankun-micro-vue2</h1>
+    <div>
+      <router-link to="/">
+        /
+      </router-link>
+      <br>
+      <router-link to="/hello">
+        /hello
+      </router-link>
+      <br>
+    </div>
     -{{ JSON.stringify(state) }}
     <router-view />
   </div>
