@@ -20,8 +20,8 @@ module.exports = {
     },
   },
   devServer: {
-    // 注意，需要修改成与在主应用中注册时一致
-    port: 8002,
+    // 注意，需要修改 .env 与在主应用中注册时一致
+    port: process.env.VUE_APP_PORT,
     headers: {
       // 本地开发，解决跨域问题
       'Access-Control-Allow-Origin': '*',
