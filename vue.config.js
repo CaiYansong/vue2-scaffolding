@@ -2,6 +2,7 @@ const { name } = require('./package.json');
 
 module.exports = {
   lintOnSave: false,
+  publicPath: process.env.NODE_ENV === 'production' ? '/micro/' + name : '/',
   chainWebpack: config => {
     config
       .plugin('html')

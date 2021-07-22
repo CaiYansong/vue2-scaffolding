@@ -55,7 +55,6 @@ export async function bootstrap() {
  * 应用每次进入都会调用 mount 方法，通常我们在这里触发应用的渲染方法
  */
 export async function mount(props) {
-  console.log(globalRegister);
   globalRegister(store, props);
   render(props);
 }
