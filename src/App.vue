@@ -9,6 +9,13 @@
     >
       <aside class="vue-scaffolding-silder-bar">
         silder bar
+        <div
+          v-for="it of apps"
+          :key="it.name"
+          @click="go(it.activeRule)"
+        >
+          - {{ it.name }}
+        </div>
       </aside>
       <main
         id="container"
@@ -20,17 +27,23 @@
 
 <script>
 import actions, { state } from '@/actions';
+import { go } from '@/utils';
+import apps from './micro-app';
 
 export default {
   data() {
     return {
       state,
+      apps,
     };
   },
   created() {
     setTimeout(() => {
       actions.setGlobalState({ a: 1 });
     }, 1000);
+  },
+  methods: {
+    go,
   },
 };
 </script>
