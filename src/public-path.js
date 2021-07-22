@@ -7,8 +7,6 @@ if (!window.less) {
   window.less.async = true;
 }
 
-const { name } = require('../package.json');
-
 (function () {
   // eslint-disable-next-line no-underscore-dangle
   if (window.__POWERED_BY_QIANKUN__) {
@@ -18,6 +16,6 @@ const { name } = require('../package.json');
       return;
     }
     // eslint-disable-next-line
-    __webpack_public_path__ = window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__ + 'micro/' + name;
+    __webpack_public_path__ = window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__;
   }
 }());
