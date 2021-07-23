@@ -5,11 +5,12 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 // 按需引入
 // import { Button } from 'element-ui';
+// 子路由使用 history 的写法
 // import VueRouter from 'vue-router';
+// import routes from '@/router/routes';
 
 // 子路由使用 hash 的写法
 import router from '@/router';
-// import routes from '@/router/routes';
 import store from '@/store';
 import globalRegister from '@/actions/global-register';
 import App from './App.vue';
