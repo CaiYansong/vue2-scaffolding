@@ -1,5 +1,5 @@
 <template>
-  <div class="home-wrap">
+  <div :class="$style['home-wrap']">
     Home
   </div>
 </template>
@@ -12,6 +12,8 @@ export default {
 };
 </script>
 
-<style>
-
+<style lang="less" module>
+.home-wrap {
+  color: #333;
+}
 </style>

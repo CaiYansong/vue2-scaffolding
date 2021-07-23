@@ -1,13 +1,13 @@
 <template>
-  <div class="vue-scaffolding">
-    <header class="vue-scaffolding-header">
+  <div :class="$style['vue-scaffolding']">
+    <header :class="$style['vue-scaffolding-header']">
       header --
       username: {{ state.user.name }}
     </header>
     <section
-      class="vue-scaffolding-main"
+      :class="$style['vue-scaffolding-main']"
     >
-      <aside class="vue-scaffolding-silder-bar">
+      <aside :class="$style['vue-scaffolding-silder-bar']">
         silder bar
         <div
           v-for="it of apps"
@@ -19,7 +19,7 @@
       </aside>
       <main
         id="container"
-        class="vue-scaffolding-container"
+        :class="$style['vue-scaffolding-container']"
       />
     </section>
   </div>
@@ -48,6 +48,43 @@ export default {
 };
 </script>
 
+<style lang="less" module>
+.vue-scaffolding {
+  flex: 1;
+  flex-basis: auto;
+  display: flex;
+  flex-direction: column;
+
+  .vue-scaffolding-header {
+    height: 60px;
+    background-color: #1890FF;
+  }
+  .vue-scaffolding-main {
+    flex: 1;
+    display: flex;
+  }
+  .vue-scaffolding-silder-bar {
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid #ccc;
+    overflow: auto;
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+  }
+  .vue-scaffolding-container {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    left: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+</style>
+
 <style>
 html,body {
   margin: 0;
@@ -55,38 +92,5 @@ html,body {
 }
 body {
   overflow: hidden;
-}
-.vue-scaffolding {
-  flex: 1;
-  flex-basis: auto;
-  display: flex;
-  flex-direction: column;
-}
-.vue-scaffolding-header {
-  height: 60px;
-  background-color: #1890FF;
-}
-.vue-scaffolding-main {
-  flex: 1;
-  display: flex;
-}
-.vue-scaffolding-silder-bar {
-  width: 200px;
-  height: 100%;
-  border-right: 1px solid #ccc;
-  overflow: auto;
-  position: absolute;
-  top: 60px;
-  bottom: 0;
-  left: 0;
-}
-.vue-scaffolding-container {
-  position: absolute;
-  top: 60px;
-  right: 0;
-  bottom: 0;
-  left: 200px;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 </style>
