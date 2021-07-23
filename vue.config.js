@@ -3,11 +3,10 @@ const { name } = require('./package.json');
 const isProd = process.env.NODE_ENV === 'production';
 const prodPath = '/micro/' + name;
 const localPath = '//localhost:' + process.env.VUE_APP_PORT;
-const publicPath = isProd ? prodPath : localPath;
 
 module.exports = {
   lintOnSave: false,
-  publicPath,
+  publicPath: isProd ? prodPath : '/',
   chainWebpack: config => {
     config
       .plugin('html')
@@ -25,7 +24,7 @@ module.exports = {
     .options({
       limit: 10000,
       name: 'static/fonts/[name].[hash:8].[ext]',
-      publicPath,
+      publicPath: isProd ? prodPath : localPath,
     });
   },
   configureWebpack: {
