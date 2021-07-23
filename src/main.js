@@ -1,11 +1,14 @@
 import Vue from 'vue';
 import less from 'less';
 import { registerMicroApps, setDefaultMountApp, start } from 'qiankun';
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 
 import App from './App.vue';
 import microApps from './micro-app';
 
 Vue.use(less);
+Vue.use(ElementUI);
 
 new Vue({
   components: { App },

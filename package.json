@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "element-ui": "^2.15.3",
     "less": "^3.13.1",
     "less-loader": "^7.3.0",
     "qiankun": "^2.4.4",
@@ -25,6 +26,7 @@
     "@vue/cli-service": "^4.5.13",
     "@vue/eslint-config-airbnb": "^5.3.0",
     "babel-eslint": "^10.1.0",
+    "babel-plugin-component": "^1.1.1",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-vue": "^6.2.2",
