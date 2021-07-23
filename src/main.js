@@ -3,6 +3,8 @@ import Vue from 'vue';
 import less from 'less';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+// 按需引入
+// import { Button } from 'element-ui';
 // import VueRouter from 'vue-router';
 
 // 子路由使用 hash 的写法
