@@ -3,11 +3,8 @@ import { createApp } from 'vue';
 import less from 'less';
 import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
-// 按需引入
-// import Button from 'ant-design-vue/lib/button';
-// import 'ant-design-vue/lib/button/style'; 
-// 或者 ant-design-vue/lib/button/style/css 加载 css 文件
-// app.use(Button)
+// 按需引入，需要开启 babel 里面的按需引入的配置
+// import { Button } from 'ant-design-vue';
 
 import setupRouter from '@/router';
 import store from '@/store';
@@ -24,6 +21,8 @@ function render(props) {
   app = createApp(App);
   app.use(less);
   app.use(Antd);
+  // 按需引入
+  // app.use(Button)
   app.use(router);
   app.use(store);
 

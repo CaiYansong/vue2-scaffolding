@@ -20,6 +20,15 @@ module.exports = {
       jsonpFunction: `webpackJsonp_${name}`,
     },
   },
+  css: {
+    loaderOptions: { // 向 CSS 相关的 loader 传递选项
+      less: {
+        lessOptions: {
+           javascriptEnabled: true
+        },
+      },
+    },
+  },
   devServer: {
     port: process.env.VUE_APP_PORT,
     headers: {
