@@ -1,8 +1,8 @@
 const { name } = require('./package.json');
 
 const isProd = process.env.NODE_ENV === 'production';
-const prodPath = '/micro/' + name;
-const localPath = '//localhost:' + process.env.VUE_APP_PORT;
+const prodPath = `/micro/${name}`;
+const localPath = `//localhost:${process.env.VUE_APP_PORT}`;
 
 module.exports = {
   lintOnSave: false,
@@ -17,15 +17,15 @@ module.exports = {
       });
 
     config.module
-    .rule("fonts")
-    .test(/\.(woff2?|eot|ttf|otf)(\?.*)?$/)
-    .use("url-loader")
-    .loader("url-loader")
-    .options({
-      limit: 10000,
-      name: 'static/fonts/[name].[hash:8].[ext]',
-      publicPath: isProd ? prodPath : localPath,
-    });
+      .rule('fonts')
+      .test(/\.(woff2?|eot|ttf|otf)(\?.*)?$/)
+      .use('url-loader')
+      .loader('url-loader')
+      .options({
+        limit: 10000,
+        name: 'static/fonts/[name].[hash:8].[ext]',
+        publicPath: isProd ? prodPath : localPath,
+      });
   },
   configureWebpack: {
     output: {
