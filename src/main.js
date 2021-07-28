@@ -8,7 +8,7 @@ import { setLoading } from './render';
 // 给子应用配置加上loader方法
 const apps = microApps.map(item => ({
   ...item,
-  setLoading,
+  loader: setLoading,
 }));
 
 registerMicroApps(apps);
