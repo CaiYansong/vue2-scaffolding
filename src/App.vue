@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style['vue-scaffolding']">
+  <div :class="$style['vue-scaffolding']" style="height: 100vh;">
     <header :class="$style['vue-scaffolding-header']">
       header --
       username: {{ state.user.name }}
@@ -18,6 +18,7 @@
         </div>
       </aside>
       <main
+        v-loading="isLoading"
         id="container"
         :class="$style['vue-scaffolding-container']"
       />
@@ -35,6 +36,7 @@ export default {
     return {
       state,
       apps,
+      isLoading: true,
     };
   },
   created() {
