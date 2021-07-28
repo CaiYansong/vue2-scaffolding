@@ -13,7 +13,7 @@ const instance = new Vue({
 }).$mount('#app');
 
 // 定义 loader 方法，loading 改变时，将变量赋值给 App.vue 的 data 中的 isLoading
-export function setLoading(loading) {
+export function loader(loading) {
   if (instance && instance.$children && instance.$children[0].isLoading !== loading) {
     // instance.$children[0] 是 App.vue，此时直接改动 App.vue 的 isLoading
     instance.$children[0].isLoading = loading;

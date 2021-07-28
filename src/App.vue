@@ -27,6 +27,7 @@
 </template>
 
 <script>
+import NProgress from 'nprogress';
 import actions, { state } from '@/actions';
 import { go } from '@/utils';
 import apps from './micro-app';
@@ -40,12 +41,21 @@ export default {
     };
   },
   created() {
-    setTimeout(() => {
-      actions.setGlobalState({ a: 1 });
-    }, 1000);
+    NProgress.start();
   },
   methods: {
     go,
+  },
+  watch: {
+    isLoading (val) {
+      if (val) {
+        NProgress.start()
+      } else {
+        this.$nextTick(() => {
+          NProgress.done()
+        })
+      }
+    }
   },
 };
 </script>
@@ -94,5 +104,10 @@ html,body {
 }
 body {
   overflow: hidden;
+}
+/* 顶部进度条 */
+#nprogress .bar {
+  /* 自定义颜色 */
+  background: red !important;
 }
 </style>

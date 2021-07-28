@@ -1,14 +1,15 @@
 import { registerMicroApps, setDefaultMountApp, start } from 'qiankun';
+import 'nprogress/nprogress.css'
 
 import microApps from './micro-app';
-import { setLoading } from './render';
+import { loader } from './render';
 
 // qiankun 相关配置
 
 // 给子应用配置加上loader方法
 const apps = microApps.map(item => ({
   ...item,
-  loader: setLoading,
+  loader,
 }));
 
 registerMicroApps(apps);
