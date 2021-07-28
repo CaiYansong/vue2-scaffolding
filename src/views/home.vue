@@ -1,6 +1,6 @@
 <template>
   <div class="home-wrap">
-    Home
+    <h1>vue3</h1>
     <div>
       <input
         v-model="username"
@@ -14,6 +14,8 @@
       {{ JSON.stringify(state) }}
     </div>
     <h2>home router-view</h2>
+    <a-button>Default Button</a-button>
+    <StepBackwardOutlined />
     <router-view />
   </div>
 </template>
