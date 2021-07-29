@@ -20,5 +20,5 @@ export function getUser() {
 }
 
 export function go(path, title = '', data = {}) {
-  window.history.pushState(data, title, path);
+  window.history.pushState(data, title || path, path);
 }
