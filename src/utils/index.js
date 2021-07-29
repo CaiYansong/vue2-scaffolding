@@ -16,3 +16,7 @@ export function setUser(user) {
 export function getUser() {
   return JSON.parse(localStorage.getItem(USER) || {});
 }
+
+export function go(path, title = '', data = {}) {
+  window.history.pushState(data, title || path, path);
+}
