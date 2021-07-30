@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { StepBackwardOutlined } from '@ant-design/icons-vue';
+// import { StepBackwardOutlined } from '@ant-design/icons-vue';
 import testImg from './assets/test-729kb.jpeg';
 import testImgA from '@/assets/test-729kb.jpeg';
 
@@ -17,7 +17,7 @@ export default {
     }
   },
   components: {
-    StepBackwardOutlined,
+    // StepBackwardOutlined,
   },
 };
 </script>

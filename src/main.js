@@ -1,10 +1,16 @@
 import './public-path';
 import { createApp } from 'vue';
 import less from 'less';
-import Antd from 'ant-design-vue';
-import 'ant-design-vue/dist/antd.css';
+
+// ant-design-vue
+// import Antd from 'ant-design-vue';
+// import 'ant-design-vue/dist/antd.css';
 // 按需引入，需要开启 babel 里面的按需引入的配置
 // import { Button } from 'ant-design-vue';
+
+// element-plus
+import ElementPlus from 'element-plus';
+import 'element-plus/lib/theme-chalk/index.css';
 
 import setupRouter from '@/router';
 import store from '@/store';
@@ -20,9 +26,15 @@ function render(props) {
   router = setupRouter();
   app = createApp(App);
   app.use(less);
-  app.use(Antd);
+
+// ant-design-vue
+  // app.use(Antd);
   // 按需引入
   // app.use(Button)
+
+  // element-plus
+  app.use(ElementPlus);
+
   app.use(router);
   app.use(store);
 

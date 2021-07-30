@@ -14,8 +14,8 @@
       {{ JSON.stringify(state) }}
     </div>
     <h2>home router-view</h2>
-    <a-button>Default Button</a-button>
-    <StepBackwardOutlined />
+    <!-- <a-button>Default Button</a-button>
+    <StepBackwardOutlined /> -->
     <router-view />
   </div>
 </template>
