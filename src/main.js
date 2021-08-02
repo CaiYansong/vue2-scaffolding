@@ -1,6 +1,5 @@
 import './public-path';
 import { createApp } from 'vue';
-import less from 'less';
 
 // ant-design-vue
 // import Antd from 'ant-design-vue';
@@ -25,7 +24,6 @@ function render(props) {
   // 这里需要注意，往下注入的必须和子打包配置一致
   router = setupRouter();
   app = createApp(App);
-  app.use(less);
 
 // ant-design-vue
   // app.use(Antd);

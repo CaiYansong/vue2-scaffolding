@@ -31,10 +31,11 @@ export default {
 </script>
 
 <style lang="less">
+@fontColor: blue
 .hello-wrap {
   .title {
     font-size: 17px;
-    color: darkslategray;
+    color: @fontColor;
   }
 }
 </style>
